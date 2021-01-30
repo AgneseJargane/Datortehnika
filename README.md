@@ -5,7 +5,7 @@ back-end -  Spring Boot un Java 8, Liquibase, MySQL8,
 front-end - Angular 9, dizainam izmantots prime ng. 
 
 Datubāzes konfigurācija apskaatāma `resources/application.properties`
-Tabulas init skripts apskatāms `resurces/Uzdevums/db` 
+Tabulas init skripts apskatāms `resources/Uzdevums/db` 
 Front-end nav parādīti `node_modules` tādēļ nepieciešams palaist `npm install`
 
 Mājaslapā ir izstrādāti divi skati - pieprasījuma skats un  pieprasījumu saraksta skats
