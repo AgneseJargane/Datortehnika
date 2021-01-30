@@ -1,8 +1,8 @@
 # Datortehnika
 Izveidota datortehnikas pieprasījuma mājaslapa 
 Projekta izstrādē izmantots:
-back-end -  Spring Boot un Java 8, Liquibase, MySQL8 
-front-end - Angular 9, dizainam izmantots prime ng 
+back-end -  Spring Boot un Java 8, Liquibase, MySQL8,
+front-end - Angular 9, dizainam izmantots prime ng. 
 
 Datubāzes konfigurācija apskaatāma `resources/application.properties`
 Tabulas init skripts apskatāms `resurces/Uzdevums/db` 
