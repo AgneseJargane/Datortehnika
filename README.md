@@ -4,7 +4,7 @@ Projekta izstrādē izmantots:
 back-end -  Spring Boot un Java 8, Liquibase, MySQL8 
 front-end - Angular 9, dizainam izmantots prime ng 
 
-Datubāzes konfigurācija apskaatāma `resources/application.properties failā`
+Datubāzes konfigurācija apskaatāma `resources/application.properties`
 Tabulas init skripts apskatāms `resurces/Uzdevums/db` 
 Front-end nav parādīti `node_modules` tādēļ nepieciešams palaist `npm install`
 
