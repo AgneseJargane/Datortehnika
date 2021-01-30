@@ -1,0 +1,49 @@
+<div style="padding: 2em;">
+  <p-card>
+    <div *ngIf="message">{{message}}</div>
+    <p-table id="requestList"
+      [value]="equipmentRequest"
+      [paginator]="true"
+      [rows]="10">
+
+      <ng-template pTemplate="header">
+        <tr>
+          <th *ngFor="let col of columns">{{col.header}}</th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-rowData>
+        <tr>
+          <td>{{rowData.insertDate |date: DateUtil.DATE_HMS_PATTERN}}</td>
+          <td>{{rowData.status}}</td>
+          <td>{{rowData.eqName}}</td>
+          <td>{{rowData.eqManufacturer}}</td>
+          <td>{{rowData.eqProcessor}}</td>
+          <td>{{rowData.eqMemory}}</td>
+          <td>{{rowData.eqJustification}}</td>
+
+          <th>
+            <button pButton label="Apstiprināt" class="p-button-outlined p-button-success"
+              (click)="approveRequest(rowData)"></button>
+          </th>
+
+          <th>
+            <button pButton label="Noraidīt" class="p-button-outlined p-button-warning"
+              (click)="deniedRequest(rowData)"></button>
+          </th>
+
+          <th>
+            <button pButton label="Dzēst" class="p-button-outlined p-button-danger"
+              (click)="deleteRecord(rowData)"></button>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td class="empty-message">Nav aktīvu pieprasījumu!</td>
+        </tr>
+      </ng-template>
+
+    </p-table>
+  </p-card>
+</div>

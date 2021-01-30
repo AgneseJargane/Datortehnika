@@ -1,0 +1,57 @@
+<div style="padding: 5em;">
+  <p-card styleClass="ui-card-shadow">
+    <h1>Datortehnikas pieprasījums</h1>
+
+    <div *ngIf="errorMessage" class="error-messages">{{errorMessage}}</div>
+    <div class="text-position">
+      <label for="type">Datortehnikas tips*</label>
+      <br>
+      <select class="dropdown" id="type" [(ngModel)]="equipment.eqName">
+        <option *ngFor="let equipmentName of equipmentDropdown.EquipmentName" [value]="equipmentName.Key">
+          {{equipmentName.Value}}
+        </option>
+      </select>
+    </div>
+
+    <div class="text-position">
+      <label for="manufacturer">Ražotājs*</label>
+      <br>
+      <select class="dropdown" id="manufacturer" [(ngModel)]="equipment.eqManufacturer">
+        <option *ngFor="let manufacturer of equipmentDropdown.Manufacturer" [value]="manufacturer.Key">
+          {{manufacturer.Value}}
+        </option>
+      </select>
+    </div>
+
+    <div class="text-position">
+      <label for="processor">Procesors*</label>
+      <br>
+      <select class="dropdown" id="processor" [(ngModel)]="equipment.eqProcessor">
+        <option *ngFor="let processor of equipmentDropdown.Processor" [value]="processor.Key">
+          {{processor.Value}}
+        </option>
+      </select>
+    </div>
+
+    <div class="text-position">
+      <label for="memory">Operatīvā atmiņa*</label>
+      <br>
+      <select class="dropdown" id="memory" [(ngModel)]="equipment.eqMemory">
+        <option *ngFor="let memory of equipmentDropdown.Memory" [value]="memory.Key">
+          {{memory.Value}}
+        </option>
+      </select>
+    </div>
+
+    <div class="text-position">
+      <label for="justification">Pamatojums*</label>
+      <br>
+      <textarea id="justification" class="text-area" [(ngModel)]="equipment.eqJustification"
+        maxlength="255"> </textarea>
+    </div>
+
+    <button pButton label="Saglabāt" class="p-button-outlined save-btn" (click)="saveEquipmentRequest()"></button>
+
+    <div *ngIf="successMessage" class="p-button-success success-messages">{{successMessage}}</div>
+  </p-card>
+</div>

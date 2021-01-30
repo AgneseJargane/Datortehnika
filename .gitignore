@@ -1,0 +1,5 @@
+#dependencies
+/Uzdevums-client/node_modules
+
+#IDE
+/.idea

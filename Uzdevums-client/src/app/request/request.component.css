@@ -1,0 +1,36 @@
+.dropdown {
+  margin: 0 3em 1em 3em;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.text-position {
+  display: inline-block;
+  text-align: center;
+}
+
+.text-area {
+  padding: 0 5px 0 5px;
+  border-radius: 5px;
+  margin: 0 3em 0 3em;
+}
+
+.error-messages {
+  color: red;
+  font-weight: bold;
+}
+
+.success-messages {
+  color: green;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.fields {
+  display: inline-block;
+}
+
+.save-btn {
+  margin-bottom: 1em;
+}
